@@ -10,7 +10,7 @@ Basically, this code supports both python2.7 and python3.5, the following packag
 * cv2
 
 ## Training Kitti
-(added by kentaro47)
+
 * Download the KITTI training example from [here](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) and [here](http://www.cvlibs.net/download.php?file=data_object_label_2.zip)
 
 * create format for training
