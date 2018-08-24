@@ -15,19 +15,24 @@ Basically, this code supports both python2.7 and python3.5, the following packag
 
 * create format for training
 execute
-'python generate_simple_kitti_anno_file.py /path/to/unzipped/image_2/ /path/to/unzipped/label_2/'
+
+``` python generate_simple_kitti_anno_file.py /path/to/unzipped/image_2/ /path/to/unzipped/label_2/ ```
+
 to get kitti_simple_label.txt. use the training folder to generate .txt file for training, and use the testing folder for test purposes.
 
 * training with dataset
 execute 
-'python train_frcnn_kitti.py'
+
+```python train_frcnn_kitti.py```
 
 * evaluating with dataset
 create test data by 
-'python generate_simple_kitti_anno_file.py /path/to/unzipped/testing/image_2/ /path/to/unzipped/testing/label_2/'
+
+```python generate_simple_kitti_anno_file.py /path/to/unzipped/testing/image_2/ /path/to/unzipped/testing/label_2/```
 
 execute 
-'python test_frcnn_kitti.py'
+
+```python test_frcnn_kitti.py```
 
 
 ## Train New Dataset
