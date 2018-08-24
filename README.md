@@ -1,6 +1,6 @@
 # Keras Faster-RCNN
 
-> this is a very userful implementation of faster-rcnn based on tensorflow and keras, the model is very clear and just saved in .h5 file, out of box to use, and easy to train on other data set with full support. if you have any question, feel free to ask me via wechat: jintianiloveu
+ this is a very userful implementation of faster-rcnn based on tensorflow and keras, the model is very clear and just saved in .h5 file, out of box to use, and easy to train on other data set with full support. if you have any question, feel free to ask me via wechat: jintianiloveu
 
 ## Requirements
 Basically, this code supports both python2.7 and python3.5, the following package should installed:
@@ -9,11 +9,26 @@ Basically, this code supports both python2.7 and python3.5, the following packag
 * scipy
 * cv2
 
-## Out of box model to predict
+## Training Kitti
+(added by kentaro47)
+* Download the KITTI training example from [here](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) and [here](http://www.cvlibs.net/download.php?file=data_object_label_2.zip)
 
-I have trained a model to predict kitti. I will update a dropbox link here later. Let's see the result of predict:
+* create format for training
+execute
+'python generate_simple_kitti_anno_file.py /path/to/unzipped/image_2/ /path/to/unzipped/label_2/'
+to get kitti_simple_label.txt. use the training folder to generate .txt file for training, and use the testing folder for test purposes.
 
-<img src="http://opbocoyb4.bkt.clouddn.com/000010.png" align="center">
+* training with dataset
+execute 
+'python train_frcnn_kitti.py'
+
+* evaluating with dataset
+create test data by 
+'python generate_simple_kitti_anno_file.py /path/to/unzipped/testing/image_2/ /path/to/unzipped/testing/label_2/'
+
+execute 
+'python test_frcnn_kitti.py'
+
 
 ## Train New Dataset
 
